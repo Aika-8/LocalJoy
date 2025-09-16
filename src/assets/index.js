@@ -1,3 +1,7 @@
+export { default as FreeShipping } from "./images/FreeSheeping.png";
+export { default as Delivery } from "./images/Delivery.png";
+export { default as Discount } from "./images/Discount2.png";
+
 import Logo from "../assets/icons/Logo.svg?react";
 import Location from "../assets/icons/Location.svg?react";
 import Peephole from "../assets/icons/Peephole.svg?react";

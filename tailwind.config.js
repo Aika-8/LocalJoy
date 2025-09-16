@@ -12,7 +12,9 @@ export default {
     extend: {
       colors: {
         "almost-white": "hsl(0, 0%, 98%)",
-        "almost-black": "hsl(0, 0%, 8%)",
+        "almost-black": "#111827",
+        "secondary-text": "#f9fafb",
+        "back-slider": "#059669",
       },
     },
   },

@@ -1,6 +1,6 @@
 import { Delivery, Discount, FreeShipping } from "../../assets";
 
-export const slides = [
+export const banners = [
   {
     id: 1,
     title: "Бесплатная доставка на первый заказ",

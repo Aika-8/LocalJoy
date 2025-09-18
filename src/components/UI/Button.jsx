@@ -1,56 +1,65 @@
 import { styled } from "@mui/material/styles";
 import { Button as MuiButton } from "@mui/material";
 
-export const GeoButton = styled(MuiButton)({
+const BaseButton = styled(MuiButton)({
   display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   gap: "4px",
-  backgroundColor: "transparent",
-  color: "#000",
   borderRadius: "8px",
-  border: "1px solid #818181",
   padding: "8px 24px",
-  fontWeight: "600",
+  fontWeight: "400",
   textTransform: "none",
   boxShadow: "none",
   fontSize: "14px",
+  transition: "all 0.3s ease",
+  "&.Mui-disabled": {
+    color: "#c4c4c4",
+    backgroundColor: "#f5f5f5",
+  },
+});
+BaseButton.defaultProps = {
+  disableRipple: true,
+  disableElevation: true,
+};
+
+export const GeoButton = styled(BaseButton)({
+  backgroundColor: "transparent",
+  color: "#000",
+  border: "1px solid #818181",
   "&:hover": {
     borderColor: "#82efbc",
   },
   "&:active": {
     borderColor: "#047857",
   },
-  "&.Mui-disabled": {
-    color: "#c4c4c4",
-  },
 });
-GeoButton.defaultProps = {
-  disableRipple: true,
-  disableElevation: true,
-};
 
-export const SlideButton = styled(MuiButton)({
-  display: "flex",
-  gap: "4px",
+export const SlideButton = styled(BaseButton)({
   backgroundColor: "transparent",
   color: "#000",
-  borderRadius: "8px",
   border: "2px solid #2d2c2c",
-  padding: "8px 24px",
   fontWeight: "400",
-  textTransform: "none",
-  boxShadow: "none",
-  fontSize: "14px",
   "&:hover": {
     borderColor: "#82efbc",
   },
   "&:active": {
     borderColor: "#5ff0a8",
   },
-  "&.Mui-disabled": {
-    color: "#c4c4c4",
+});
+
+export const StockButton = styled(BaseButton)({
+  backgroundColor: "#ffffff",
+  color: "#109972",
+  border: "none",
+  fontSize: "12px",
+  borderRadius: "9999px",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+  "&:hover": {
+    backgroundColor: "#ecfdf5",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+  },
+  "&:active": {
+    backgroundColor: "#d1fae5",
   },
 });
-SlideButton.defaultProps = {
-  disableRipple: true,
-  disableElevation: true,
-};

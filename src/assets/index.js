@@ -1,3 +1,7 @@
+export { default as Unplush1 } from "./images/Unplash1.png";
+export { default as Unplush2 } from "./images/Unplash2.png";
+export { default as SmallUnplush1 } from "./images/SmallUnplush1.png";
+export { default as SmallUnplush2 } from "./images/SmallUnplush2.png";
 export { default as FreeShipping } from "./images/FreeSheeping.png";
 export { default as Delivery } from "./images/Delivery.png";
 export { default as Discount } from "./images/Discount2.png";

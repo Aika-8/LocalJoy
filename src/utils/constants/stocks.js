@@ -16,4 +16,14 @@ export const stocks = [
     title: "Распродажа",
     image: Sale,
   },
+  {
+    id: 4,
+    title: "Скидки недели",
+    image: Groceries,
+  },
+  {
+    id: 5,
+    title: "Распродажа",
+    image: Sale,
+  },
 ];

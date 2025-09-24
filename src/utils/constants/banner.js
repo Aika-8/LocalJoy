@@ -1,6 +1,14 @@
-import { Delivery, Discount, FreeShipping } from "../../assets";
+import {
+  Delivery,
+  Discount,
+  FreeShipping,
+  SmallUnplush1,
+  SmallUnplush2,
+  Unplush1,
+  Unplush2,
+} from "../../assets";
 
-export const banners = [
+export const bannersForTest = [
   {
     id: 1,
     title: "Бесплатная доставка на первый заказ",
@@ -19,4 +27,11 @@ export const banners = [
     text: "Успей купить лучшие товары по суперценам!",
     image: Discount,
   },
+];
+
+export const banners = [
+  { title: "Весенние скидки", large: Unplush1, small: SmallUnplush1 },
+  { title: "Новинки недели", large: Unplush2, small: SmallUnplush2 },
+  { title: "Бесплатная доставка", large: Unplush1, small: SmallUnplush1 },
+  { title: "Акция 1+1", large: Unplush2, small: SmallUnplush2 },
 ];

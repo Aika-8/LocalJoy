@@ -1,5 +1,9 @@
 import { stocks } from "../../utils/constants/stocks";
 import { StockButton } from "../UI/Button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export const Stock = () => {
   const bgGradients = [
@@ -10,34 +14,84 @@ export const Stock = () => {
     "bg-gradient-to-br from-violet-300 via-purple-400 to-indigo-600",
   ];
   return (
-    <div className="flex flex-wrap gap-8 justify-center px-36">
-      {stocks.map((item, index) => (
-        <div
-          key={index}
-          className={`w-[250px] h-[250px] flex flex-col justify-start items-center gap-[5px] 
-                     ${bgGradients[index % bgGradients.length]} 
-                     rounded-lg shadow-lg shadow-gray-400/50 hover:scale-[1.03] transition-transform`}
+    <div className="flex flex-col justify-center items-center gap-5 lg:gap-7 px-4 py-6">
+      <h1 className="text-5xl text-center lg:text-left w-full">Акции</h1>
+      <div className="block lg:hidden w-full">
+        <Swiper
+          modules={[Navigation]}
+          navigation
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 16,
+            },
+            835: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
+          }}
         >
-          <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-10 transition-opacity"></div>
-          <div className="flex flex-col items-center justify-between h-full p-4">
-            <h2 className="text-3xl font-bold text-gray-800 relative">
-              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-emerald-500 rounded-full"></span>
-              <span className="ml-4"> {item.title}</span>
-            </h2>
-            <div className="w-full h-[200px] flex items-center justify-center">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="max-h-[180px] object-contain transition-transform duration-300 group-hover:scale-105"
-              />
+          {stocks.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={`h-[250px] w-full mx-auto flex flex-col justify-start items-center gap-[5px]
+                  ${bgGradients[index % bgGradients.length]}
+                  rounded-lg shadow-lg shadow-gray-400/50 hover:scale-[1.03] transition-transform`}
+              >
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-white/20 rounded-full"></div>
+                <div className="absolute bottom-4 right-8 w-16 h-16 bg-white/30 rotate-45"></div>
+                <div className="absolute bottom-10 left-16 w-16 h-16 bg-white/30 rotate-45"></div>
+                <div className="absolute top-7 right-12 w-20 h-20 border-4 border-white/20 rounded-full"></div>
+                <div className="relative z-10 flex flex-col items-center justify-between h-full p-4">
+                  <h2 className="text-2xl font-bold text-gray-800 text-center">
+                    {item.title}
+                  </h2>
+                  <div className="w-full h-[150px] flex items-center justify-center">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="max-h-[140px] object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <StockButton className="mt-2 px-4 py-2 text-sm font-medium text-emerald-600 bg-white rounded-full shadow hover:bg-emerald-50 transition-colors">
+                    Подробнее
+                  </StockButton>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="hidden lg:flex flex-wrap gap-8 justify-start w-full">
+        {stocks.map((item, index) => (
+          <div
+            key={index}
+            className={`w-[250px] h-[250px] flex flex-col justify-start items-center gap-[5px]
+              ${bgGradients[index % bgGradients.length]}
+              rounded-lg shadow-lg shadow-gray-400/50 hover:scale-[1.03] transition-transform`}
+          >
+            <div className="flex flex-col items-center justify-between h-full p-4">
+              <h2 className="text-2xl font-bold text-gray-800 text-center">
+                {item.title}
+              </h2>
+              <div className="w-full h-[150px] flex items-center justify-center">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="max-h-[140px] object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <StockButton className="mt-2 px-4 py-2 text-sm font-medium text-emerald-600 bg-white rounded-full shadow hover:bg-emerald-50 transition-colors">
+                Подробнее
+              </StockButton>
             </div>
-
-            <StockButton className="mt-2 px-4 py-2 text-sm font-medium text-emerald-600 bg-white rounded-full shadow hover:bg-emerald-50 transition-colors">
-              Подробнее
-            </StockButton>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

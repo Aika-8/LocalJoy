@@ -13,6 +13,7 @@ export default {
       colors: {
         "almost-white": "hsl(0, 0%, 98%)",
         "almost-black": "#111827",
+        "background-color": "#FAF9F8",
         "secondary-text": "#f9fafb",
         "back-slider": "#059669",
       },

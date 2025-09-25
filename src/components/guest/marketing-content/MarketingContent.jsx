@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import { SlideButton } from "../UI/Button";
-import { bannersForTest } from "../../utils/constants/banner";
+import { SlideButton } from "../../UI/Button";
+import { bannersForTest } from "../../../utils/constants/banner";
 
 export const MarketingContent = () => {
   return (

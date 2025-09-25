@@ -18,12 +18,12 @@ export const stocks = [
   },
   {
     id: 4,
-    title: "Скидки недели",
+    title: "Желтая цена",
     image: Groceries,
   },
   {
     id: 5,
-    title: "Распродажа",
+    title: "1+1",
     image: Sale,
   },
 ];

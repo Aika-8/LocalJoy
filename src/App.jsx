@@ -1,11 +1,9 @@
-import { MarketingContent } from "./components/marketing-content/MarketingContent";
-import { Stock } from "./components/stock/Stock";
+import { MainGuest } from "./pages/guest/MainGuest";
 
 export function App() {
   return (
     <div>
-      <MarketingContent />
-      <Stock />
+      <MainGuest />
     </div>
   );
 }

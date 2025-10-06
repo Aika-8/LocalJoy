@@ -1,5 +1,5 @@
-import { stocks } from "../../utils/constants/stocks";
-import { StockButton } from "../UI/Button";
+import { stocks } from "../../../utils/constants/stocks";
+import { StockButton } from "../../UI/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";

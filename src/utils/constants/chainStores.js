@@ -1,20 +1,20 @@
-import { Azia, Dostor, FixPrice, Globus, Narodny } from "../../assets";
+import { Azia2, Dostor, FixPrice, Globus2, Narodny2 } from "../../assets";
 
 export const chainStore = [
   {
     id: 1,
     title: "Азия",
-    image: Azia,
+    image: Azia2,
   },
   {
     id: 2,
     title: "Globus",
-    image: Globus,
+    image: Globus2,
   },
   {
     id: 3,
     title: "Народный",
-    image: Narodny,
+    image: Narodny2,
   },
   {
     id: 4,

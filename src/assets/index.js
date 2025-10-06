@@ -9,8 +9,11 @@ export { default as BuyNow } from "./images/BuyNow.png";
 export { default as Groceries } from "./images/Groceries.png";
 export { default as Sale } from "./images/Sale.png";
 export { default as Globus } from "./images/Globus.png";
+export { default as Globus2 } from "./images/Globus2.png";
 export { default as Azia } from "./images/Azia.png";
+export { default as Azia2 } from "./images/Azia2.png";
 export { default as Narodny } from "./images/Narodny.png";
+export { default as Narodny2 } from "./images/Narodny2.png";
 export { default as Dostor } from "./images/Dostor.png";
 export { default as FixPrice } from "./images/FixPrice.png";
 
